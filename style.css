@@ -1,0 +1,146 @@
+/* 
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+*/
+:root {
+    /* color primary */
+    --color-primary-blue: hsl(215, 51%, 70%);
+    --color-primary-cyan: hsl(178, 100%, 50%);
+
+    /* color neutral */
+    --dark-blue: hsl(217, 54%, 11%);
+    --darker-blue: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    color: var(--white);
+}
+
+.wrapper {
+    height: 100vh;
+    /* width: 1440px; */
+    margin: auto;
+    display: grid;
+    place-items: center;
+    background: var(--dark-blue);
+}
+
+.card {
+    background-color: var(--darker-blue);
+    height: 600px;
+    width: 350px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card__title {
+    margin-top: 1.2rem;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--color-primary-blue);
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-blue-line);
+    padding-bottom: 1.5rem;
+}
+
+.card__price {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary-cyan);
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card__price img {
+    margin-right: 8px;
+}
+
+.card__time {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary-blue);
+    font-weight: 400;
+}
+
+.card__time img {
+    margin-right: 8px;
+}
+
+.card__footer {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.card__footer--img {
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    width: 35px;
+    margin-right: 20px;
+}
+
+.card__footer--text span {
+    color: var(--color-primary-blue);
+}
+
+/* footer attribute */
+.attribution {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(207, 76%, 60%);
+}
